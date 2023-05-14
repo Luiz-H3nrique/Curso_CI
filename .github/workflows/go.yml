@@ -15,11 +15,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     environment: Teste_ci
     env: 
-      HOST: ${{ env.testeHOST}}
-      PORT: $PORT
-      USER: $USER
-      PASSWORD: $PASSWORD
-      DBNAME: $DBNAME
+      HOST: ${{ secrets.Host }}
+      PORT: ${{ secrets.PORT }}
+      USER: ${{ secrets.USER }}
+      PASSWORD: ${{ secrets.PASSword }}
+      DBNAME: ${{ secrets.DBNAME }}
     strategy:
       matrix:
         go_version: ['1.18', '1.19' ,'>=1.19']
