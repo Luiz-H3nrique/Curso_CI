@@ -9,4 +9,5 @@ ENV USER=root  PASSWORD=root DBNAME=root
 
 COPY ./main main 
 
+
 CMD [ "./main" ]
