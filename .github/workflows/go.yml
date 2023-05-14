@@ -43,16 +43,18 @@ jobs:
       
   build:
    needs: test
-   runs-on: ${{ matrix.os }}
-   strategy:
-      matrix:
-        os: ['ubuntu-latest', 'ubuntu-20.04']
+   runs-on: ubuntu-latest
+ 
    steps:
     - uses: actions/checkout@v3
     - name: Build
       run: go build -v main.go
-    - name: Teste secret
-      run: echo ${{ secrets.TESTE }} 
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: Programa 
+        path: main 
+ 
   
   docker:
     needs: build 
