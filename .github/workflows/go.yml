@@ -51,4 +51,8 @@ jobs:
     - name: Build
       run: go build -v main.go
     - name: Teste secret
-      run: echo ${{ secrets.TESTE }}
+      run: echo ${{ secrets.TESTE }} 
+  
+  docker:
+    needs: build 
+    uses: ./.github/workflows/Docker.yml
