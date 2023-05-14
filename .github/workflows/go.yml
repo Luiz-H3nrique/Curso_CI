@@ -13,8 +13,9 @@ jobs:
 
   test:
     runs-on: ${{ matrix.os }}
+    environment: Teste_ci
     env: 
-      HOST: $HOST
+      HOST: ${{ env.testeHOST}}
       PORT: $PORT
       USER: $USER
       PASSWORD: $PASSWORD
