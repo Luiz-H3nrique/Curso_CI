@@ -13,6 +13,12 @@ jobs:
 
   test:
     runs-on: ${{ matrix.os }}
+    env: 
+      HOST: ${{ env.HOST }}
+      PORT: ${{ env.PORT }}
+      USER: ${{ env.USER }}
+      PASSWORD: ${{ env.PASSWORD }}
+      DBNAME: ${{ env.DBNAME }}
     strategy:
       matrix:
         go_version: ['1.18', '1.19' ,'>=1.19']
