@@ -41,4 +41,4 @@ jobs:
     - name: Build
       run: go build -v main.go
     - name: Teste secret
-      run: echo {{secret.TESTE}}
+      run: echo {{ secrets.TESTE }}
