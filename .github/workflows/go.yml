@@ -40,3 +40,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build
       run: go build -v main.go
+    - name: Teste secret
+      run: echo {{secret.TESTE}}
