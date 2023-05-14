@@ -14,11 +14,11 @@ jobs:
   test:
     runs-on: ${{ matrix.os }}
     env: 
-      HOST: ${{ secrets.HOST }}
+      HOST: localhost
       PORT: 5432
-      USER: ${{ secrets.USER }}
-      PASSWORD: ${{ secrets.PASSWORD }}
-      DBNAME: ${{ secrets.DBNAME }}
+      USER: root
+      PASSWORD: root
+      DBNAME: root
     strategy:
       matrix:
         go_version: ['1.18', '1.19' ,'>=1.19']
